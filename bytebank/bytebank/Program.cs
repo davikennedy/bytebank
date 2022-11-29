@@ -1,7 +1,9 @@
 ﻿using bytebank;
+using bytebank.Titular;
 
 Console.WriteLine("Boas vindas ao seu banco, ByteBank!");
 
+/*
 ContaCorrente conta1 = new ContaCorrente();
 conta1.titular = "Davi Kennedy";
 conta1.conta = "10123-X";
@@ -16,7 +18,7 @@ conta2.numeroAgencia = 23;
 conta2.nomeAgencia = "Agência Central";
 conta2.saldo = 100;
 
-/*Console.WriteLine("");
+Console.WriteLine("");
 Console.WriteLine($"Saldo de {conta1.titular}: R$ {conta1.saldo}");
 Console.WriteLine($"Saldo de {conta2.titular}: R$ {conta2.saldo}");
 
@@ -36,5 +38,15 @@ Cliente cliente1 = new Cliente();
 cliente1.nome = "Davi Kennedy";
 cliente1.cpf = "012.345.678-90";
 cliente1.profissao = "Desenvolvedor C#";
+
+ContaCorrente conta3 = new ContaCorrente();
+conta3.titular = cliente1;
+conta3.conta = "251312-X";
+conta3.numeroAgencia = 23;
+conta3.nomeAgencia = "Agência Central";
+conta3.saldo = 100;
+
+Console.WriteLine($"{cliente1.nome}");
+Console.WriteLine($"{conta3.titular.nome}");
 
 Console.ReadKey();
