@@ -2,7 +2,6 @@
 {
     public class ContaCorrente
     {
-        public string titular;
         public string conta;
         public int numeroAgencia;
         public string nomeAgencia;
@@ -26,6 +25,20 @@
             if (valor > 0)
             {
                 saldo += valor;
+            }
+        }
+
+        public bool Transferir(double valor, ContaCorrente destino)
+        {
+            if (saldo < valor || valor < 0)
+            {
+                return false;
+            }
+            else
+            {
+                saldo -= valor;
+                destino.saldo += valor;
+                return true;
             }
         }
     }
