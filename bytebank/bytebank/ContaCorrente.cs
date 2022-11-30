@@ -53,5 +53,10 @@ namespace bytebank
             }
             saldo += valor;
         }
+
+        public double ObterSaldo()
+        {
+            return saldo;
+        }
     }
 }
