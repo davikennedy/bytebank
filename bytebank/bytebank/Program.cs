@@ -32,7 +32,7 @@ Console.WriteLine($"Titular: {conta1.titular}");
 Console.WriteLine($"Conta: {conta1.conta}");
 Console.WriteLine($"Número da agência: {conta1.numeroAgencia}");
 Console.WriteLine($"Nome da agência: {conta1.nomeAgencia}");
-Console.WriteLine($"Saldo: {conta1.saldo}");*/
+Console.WriteLine($"Saldo: {conta1.saldo}");
 
 Cliente cliente1 = new Cliente();
 cliente1.nome = "Davi Kennedy";
@@ -40,13 +40,16 @@ cliente1.cpf = "012.345.678-90";
 cliente1.profissao = "Desenvolvedor C#";
 
 ContaCorrente conta3 = new ContaCorrente();
-conta3.titular = cliente1;
+conta3.titular = new Cliente();
+conta3.titular.nome = "Davi Kennedy";
+conta3.titular.cpf = "012.345.678-90";
+conta3.titular.profissao = "Desenvolvedor C#";
 conta3.conta = "251312-X";
 conta3.numeroAgencia = 23;
 conta3.nomeAgencia = "Agência Central";
 conta3.saldo = 100;
 
 Console.WriteLine($"{cliente1.nome}");
-Console.WriteLine($"{conta3.titular.nome}");
+Console.WriteLine($"{conta3.titular.nome}");*/
 
 Console.ReadKey();
