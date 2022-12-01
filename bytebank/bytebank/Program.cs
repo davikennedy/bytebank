@@ -53,7 +53,7 @@ Console.WriteLine($"{cliente1.nome}");
 Console.WriteLine($"{conta3.titular.nome}");*/
 
 ContaCorrente conta4 = new ContaCorrente();
-conta4.DefinirSaldo(150);
-Console.WriteLine($"Saldo: R$ {conta4.ObterSaldo()}");
+conta4.Saldo = 150;
+Console.WriteLine($"Saldo: R$ {conta4.Saldo}");
 
 Console.ReadKey();

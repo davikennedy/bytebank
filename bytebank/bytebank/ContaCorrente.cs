@@ -8,17 +8,17 @@ namespace bytebank
         public string conta;
         public int numeroAgencia;
         public string nomeAgencia;
-        private double saldo;
+        private double _saldo;
 
         public bool Sacar(double valor)
         {
-            if (saldo < valor || valor < 0)
+            if (_saldo < valor || valor < 0)
             {
                 return false;
             }
             else
             {
-                saldo -= valor;
+                _saldo -= valor;
                 return true;
             }
         }
@@ -27,36 +27,51 @@ namespace bytebank
         {
             if (valor > 0)
             {
-                saldo += valor;
+                _saldo += valor;
             }
         }
 
         public bool Transferir(double valor, ContaCorrente destino)
         {
-            if (saldo < valor || valor < 0)
+            if (_saldo < valor || valor < 0)
             {
                 return false;
             }
             else
             {
-                saldo -= valor;
-                destino.saldo += valor;
+                _saldo -= valor;
+                destino._saldo += valor;
                 return true;
             }
         }
 
-        public void DefinirSaldo(double valor)
-        {
-            if (valor < 0)
-            {
-                return;
-            }
-            saldo += valor;
-        }
+        /*public void Set_saldo(double valor)
+         {
+             if (valor < 0)
+             {
+                 return;
+             }
+             _saldo += valor;
+         }
 
-        public double ObterSaldo()
+         public double Get_saldo()
+         {
+             return _saldo;
+         }*/
+        public double Saldo
         {
-            return saldo;
+            get
+            {
+                return _saldo;
+            }
+            set
+            {
+                if (value < 0)
+                {
+                    return;
+                }
+                _saldo += value;
+            }
         }
     }
 }
