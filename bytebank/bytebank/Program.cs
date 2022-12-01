@@ -52,8 +52,11 @@ conta3.saldo = 100;
 Console.WriteLine($"{cliente1.nome}");
 Console.WriteLine($"{conta3.titular.nome}");*/
 
+Cliente sarah = new Cliente();
+
 ContaCorrente conta4 = new ContaCorrente();
-conta4.Saldo = 150;
+conta4.Saldo = 100;
+conta4.Titular = sarah;
 Console.WriteLine($"Saldo: R$ {conta4.Saldo}");
 
 Console.ReadKey();

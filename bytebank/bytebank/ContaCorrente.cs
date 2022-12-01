@@ -4,10 +4,11 @@ namespace bytebank
 {
     public class ContaCorrente
     {
-        public Cliente titular;
-        public string conta;
-        public int numeroAgencia;
-        public string nomeAgencia;
+        public Cliente Titular { get; set; }
+        public string Conta { get; set; }
+        public int NumeroAgencia { get; set; }
+        public string NomeAgencia { get; set; }
+
         private double _saldo;
 
         public bool Sacar(double valor)
@@ -45,24 +46,11 @@ namespace bytebank
             }
         }
 
-        /*public void Set_saldo(double valor)
-         {
-             if (valor < 0)
-             {
-                 return;
-             }
-             _saldo += valor;
-         }
-
-         public double Get_saldo()
-         {
-             return _saldo;
-         }*/
         public double Saldo
         {
-            get
-            {
-                return _saldo;
+            get 
+            { 
+                return _saldo; 
             }
             set
             {
