@@ -53,10 +53,14 @@ Console.WriteLine($"{cliente1.nome}");
 Console.WriteLine($"{conta3.titular.nome}");*/
 
 Cliente sarah = new Cliente();
+sarah.Nome = "Sarah Silva";
 
-ContaCorrente conta4 = new ContaCorrente();
+ContaCorrente conta4 = new ContaCorrente(23, "25135-X");
 conta4.Saldo = 100;
 conta4.Titular = sarah;
+Console.WriteLine($"Titular: {conta4.Titular.Nome}");
 Console.WriteLine($"Saldo: R$ {conta4.Saldo}");
+Console.WriteLine($"Número da Agência: {conta4.NumeroAgencia}");
+Console.WriteLine($"Número da Agência: {conta4.Conta}");
 
 Console.ReadKey();
