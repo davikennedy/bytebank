@@ -7,5 +7,14 @@
         public string Profissao { get; set; }
 
         ContaCorrente conta;
+
+        public Cliente()
+        {
+            TotalClientes += 1;
+        }
+        
+        public static int TotalClientes { get; set; }
+
+
     }
 }

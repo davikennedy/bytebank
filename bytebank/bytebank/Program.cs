@@ -50,7 +50,7 @@ conta3.nomeAgencia = "Agência Central";
 conta3.saldo = 100;
 
 Console.WriteLine($"{cliente1.nome}");
-Console.WriteLine($"{conta3.titular.nome}");*/
+Console.WriteLine($"{conta3.titular.nome}");
 
 Cliente sarah = new Cliente();
 sarah.Nome = "Sarah Silva";
@@ -61,6 +61,31 @@ conta4.Titular = sarah;
 Console.WriteLine($"Titular: {conta4.Titular.Nome}");
 Console.WriteLine($"Saldo: R$ {conta4.Saldo}");
 Console.WriteLine($"Número da Agência: {conta4.NumeroAgencia}");
-Console.WriteLine($"Número da Agência: {conta4.Conta}");
+Console.WriteLine($"Número da Agência: {conta4.Conta}"); 
+
+ContaCorrente conta5 = new ContaCorrente(23, "25135-X");
+ContaCorrente conta6 = new ContaCorrente(25, "13275-X");
+
+Console.WriteLine(ContaCorrente.TotalContasCriadas);*/
+
+Cliente sarah = new Cliente();
+sarah.Nome = "Sarah Silva";
+sarah.Profissao = "Professora";
+sarah.Cpf = "11111111-12";
+
+Cliente ester = new Cliente();
+ester.Nome = "Ester Almeida";
+ester.Profissao = "Advogada";
+ester.Cpf = "868524125-32";
+
+Console.WriteLine("Total de clientes: " + Cliente.TotalClientes);
+
+ContaCorrente contaAndre = new ContaCorrente(159, "152869-x");
+contaAndre.Titular = new Cliente();
+contaAndre.Titular.Nome = " André Pereira";
+contaAndre.Titular.Profissao = "Auxiliar Administrativo";
+contaAndre.Saldo = 100;
+
+Console.WriteLine("Total de clientes: " + Cliente.TotalClientes);
 
 Console.ReadKey();

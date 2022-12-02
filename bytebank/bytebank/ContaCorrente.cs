@@ -15,7 +15,7 @@ namespace bytebank
             }
             set
             {
-                if (value.Length == null)
+                if (value == null)
                 {
                     return;
                 }
@@ -92,10 +92,14 @@ namespace bytebank
             }
         }
 
-        public ContaCorrente(int numeroAgencia, string conta)
+        public ContaCorrente(Cliente titular, string nomeAgencia, int numeroAgencia, string conta)
         {
+            Titular = titular;
+            NomeAgencia = nomeAgencia;
             NumeroAgencia = numeroAgencia;
             Conta = conta;
         }
+
+        public static int TotalContasCriadas { get; set; }
     }
 }
